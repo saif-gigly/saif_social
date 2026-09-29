@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #14120f;
+  --color-paper: #f2ece1;
+  --color-brass: #b8873f;
+  --color-smoke: #8b8377;
+  --color-moss: #5f7a55;
+  --color-rust: #a2503a;
+  --color-card: #1c1a15;
+  --color-border: #2b2822;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-paper: var(--color-paper);
+  --color-brass: var(--color-brass);
+  --color-smoke: var(--color-smoke);
+  --color-moss: var(--color-moss);
+  --color-rust: var(--color-rust);
+  --color-card: var(--color-card);
+  --color-border: var(--color-border);
+  --font-ui: var(--font-inter);
+  --font-bn: var(--font-noto-serif-bengali);
+  --font-serif: var(--font-source-serif);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-ui), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-content-bn {
+  font-family: var(--font-bn), serif;
+  line-height: 1.78;
+}
+
+.font-content-en {
+  font-family: var(--font-serif), serif;
+  line-height: 1.6;
+}
+
+textarea,
+input,
+select {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 8px;
+}
